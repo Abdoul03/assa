@@ -1,40 +1,85 @@
+{% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% tailwind_css %}
     <title>Inscription</title>
   </head>
-  <body>
-    <h2>Inscription</h2>
-    <form action="" method="post">
-      <div>
-        <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom" />
+  <body class="bg-slate-800">
+    <div class="flex">
+      <div class="right w-1/2"></div>
+      <div class="left w-1/2">
+        <form action="" method="post" class="mt-60 text-3xl ml-10">
+          <h2 class="ml-44 text-white mb-10">Inscription</h2>
+          <div class="flex flex-col justify-center text-blue-200">
+            <div class="flex flex-row mt-3 gap-24">
+              <label for="nom">Nom</label>
+              <input type="text" name="nom" id="nom" class="rounded-md" />
+            </div>
+            <div class="flex flex-row mt-3 gap-16">
+              <label for="prenom">Prenom</label>
+              <input type="text" name="Prenom" id="prenom" class="rounded-md" />
+            </div>
+            <div class="flex flex-row mt-3 gap-24">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" class="rounded-md" />
+            </div>
+            <div class="flex flex-row mt-3 gap-16">
+              <label for="adress">Adresse</label>
+              <input
+                type="text"
+                name="adresse"
+                id="adress"
+                class="rounded-md"
+              />
+            </div>
+            <div class="flex flex-row mt-3 gap-10">
+              <label for="telephone">Telephone</label>
+              <input
+                type="tel"
+                name="telephone"
+                id="telephone"
+                class="rounded-md"
+              />
+            </div>
+            <div class="flex flex-row mt-3 gap-2">
+              <label for="motDePasse">Mot de passe</label>
+              <input
+                type="password"
+                name="mot_de_passe"
+                id="motDePasse"
+                class="rounded-md"
+              />
+            </div>
+            <p class="ml-44 text-white mt-2">Vous êtes ?</p>
+            <div class="choix flex flex-row gap-2 mt-2 ml-10">
+              <div>
+                <label for="medecin">Medecin</label>
+                <input type="checkbox" name="" id="medecin" />
+              </div>
+              <div>
+                <label for="patien">Patient</label>
+                <input type="checkbox" name="" id="patien" />
+              </div>
+              <div>
+                <label for="pharmacien">Pharmacien</label>
+                <input type="checkbox" name="" id="pharmacien" />
+              </div>
+            </div>
+            <input
+              type="submit"
+              value="Inscription"
+              class="text-gray-300 border-2 rounded-full mb-5 ml-60 mt-5 w-40 border-slate-200"
+            />
+            <p>
+              Vous avez deja un compte ?
+              <a href="" class="text-gray-300"> Connectez-vous </a>
+            </p>
+          </div>
+        </form>
       </div>
-      <div>
-        <label for="prenom">Prenom</label>
-        <input type="text" name="Prenom" id="prenom" />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-      </div>
-      <div>
-        <label for="adress">Adresse</label>
-        <input type="text" name="adresse" id="adresse" />
-      </div>
-      <div>
-        <label for="telephone">Telephone</label>
-        <input type="tel" name="telephone" id="telephone" />
-      </div>
-      <div>
-        <label for="motDePasse">Mot de passe</label>
-        <input type="password" name="mot_de_passe" id="motDePasse" />
-      </div>
-      <div>
-        <input type="submit" value="Inscription" />
-      </div>
-    </form>
+    </div>
   </body>
 </html>

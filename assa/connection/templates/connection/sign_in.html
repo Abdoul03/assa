@@ -1,25 +1,29 @@
+{% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% tailwind_css %}
     <title>Connexion</title>
   </head>
-  <body>
-    <h2>Connectez-vous</h2>
-    <form action="" method="post">
-      <div>
-        <label for="tel">telephone</label>
-        <input type="text" name="telephone" id="tel" />
+  <body class="bg-slate-800">
+    <form action="" method="post" class="text-3xl absolute left-1/3 top-1/3">
+      <h2 class="ml-44 text-white mb-10">Connectez-vous</h2>
+      <div class="flex flex-col justify-center text-blue-200">
+        <div class="flex flex-row mt-3 gap-24">
+          <label for="tel">telephone</label>
+          <input type="text" name="telephone" id="tel" class="rounded-md"/>
+        </div>
+        <div class="flex flex-row mt-3 gap-12">
+          <label for="nomDePasse">Mot de passe</label>
+          <input type="password" name="mot_de_passe" id="nomDePasse" class="rounded-md"/>
+        </div>
+        <div>
+          <input type="submit" value="Connexion" class="text-gray-300 border-2 rounded-full mb-5 ml-60 mt-5 w-40 border-slate-200"/>
+        </div>
+        <p>Vous n'avez pas de compte ? <a href="connection/sign_up" class="text-gray-300">Inscrivez-vous</a></p>
       </div>
-      <div>
-        <label for="nomDePasse">Mot de passe</label>
-        <input type="password" name="mot_de_passe" id="nomDePasse" />
-      </div>
-      <div>
-        <input type="submit" value="Connexion" />
-      </div>
-      <p>Vous n'avez pas de compte ? <a href="">Inscrivez-vous</a></p>
     </form>
   </body>
 </htm>
