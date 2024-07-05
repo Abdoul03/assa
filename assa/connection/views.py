@@ -9,3 +9,10 @@ def sign_in(request):
 def sign_up(request):
     return render(request,'connection/sign_up.html')
 
+
+def medecin(request):
+    return render(request,'connection/medecin.html')
+
+
+def patients(request):
+    return render(request,'connection/patient.html')
