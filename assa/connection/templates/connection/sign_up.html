@@ -8,6 +8,9 @@
     <title>Inscription</title>
   </head>
   <body class="bg-slate-800">
+    <div class="logo ml-56 pl-10 pt-5 text-4xl text-blue-300">
+      <a href="/">Assa</a>
+    </div>
     <div class="flex">
       <div class="right w-1/2"></div>
       <div class="left w-1/2">
@@ -16,11 +19,17 @@
           <div class="flex flex-col justify-center text-blue-200">
             <div class="flex flex-row mt-3 gap-24">
               <label for="nom">Nom</label>
-              <input type="text" name="nom" id="nom" class="rounded-md" />
+              <input
+                type="text"
+                required
+                name="nom"
+                id="nom"
+                class="rounded-md"
+              />
             </div>
             <div class="flex flex-row mt-3 gap-16">
               <label for="prenom">Prenom</label>
-              <input type="text" name="Prenom" id="prenom" class="rounded-md" />
+              <input type="text" name="prenom" id="prenom" class="rounded-md" />
             </div>
             <div class="flex flex-row mt-3 gap-24">
               <label for="email">Email</label>
@@ -54,7 +63,7 @@
               />
             </div>
             <p class="ml-44 text-white mt-2">Vous êtes ?</p>
-            <div class="choix flex flex-row gap-2 mt-2 ml-10">
+            <!-- <div class="choix flex flex-row gap-2 mt-2 ml-10">
               <div>
                 <label for="medecin">Medecin</label>
                 <input type="checkbox" name="" id="medecin" />
@@ -67,7 +76,7 @@
                 <label for="pharmacien">Pharmacien</label>
                 <input type="checkbox" name="" id="pharmacien" />
               </div>
-            </div>
+            </div>-->
             <input
               type="submit"
               value="Inscription"
@@ -75,7 +84,9 @@
             />
             <p>
               Vous avez deja un compte ?
-              <a href="" class="text-gray-300"> Connectez-vous </a>
+              <a href="/connection/sign_in/" class="text-gray-300">
+                Connectez-vous
+              </a>
             </p>
           </div>
         </form>
